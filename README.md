@@ -15,7 +15,7 @@ Enlazar nuestro volumen de datos a nuestro contenedor de PostgreSQL
 
 **docker run --rm --volumes-from datospg -p 5432:5432 postgres:10.13**
 
-> *--rm elimina el contenedor al cerrarlo*
+> *--rm elimina el contenedor al cerrarlo*     
 > *--volumes-from datospg : indica utilice el volumen que hemos creado del contenedor.*     
 > *-p 5432:5432 : como primer dato indicamos el puerto de nuestra maquina local separado por ':' que indica el puerto del contenedor docker (en este caso postgres)*     
 > *Tambien podemos agregar un nombre al contenedor con la instruccion --name nombreContenedor.*     
