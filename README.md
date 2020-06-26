@@ -4,7 +4,7 @@
 Persistencia en datos de un contenedor de PosgreSQL
 Para persistir la información del banco de datos hay que crear un contenedor de datos y enlazarlo al contenedor de Postgres.
 
-**docker create -v /var/lib/postgresql/data --name datospg postgres10.13 /bin/true
+**docker create -v /var/lib/postgresql/data --name datospg postgres10.13 /bin/true**
 
 
 *-v /var/lib/postgresql/data : crea un volumen donde se almacenara la informacion en el equipo local.*
@@ -13,7 +13,7 @@ Para persistir la información del banco de datos hay que crear un contenedor de
 
 Enlazar nuestro volumen de datos a nuestro contenedor de PostgreSQL
 
-**docker run --rm --volumes-from datospg -p 5432:5432 postgres:10.13
+**docker run --rm --volumes-from datospg -p 5432:5432 postgres:10.13**
 
 *--volumes-from datospg : indica utilice el volumen que hemos creado del contenedor.*
 *-p 5432:5432 : como primer dato indicamos el puerto de nuestra maquina local separado por ':' que indica el puerto del contenedor docker (en este caso postgres)*
